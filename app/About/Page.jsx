@@ -17,7 +17,7 @@ const AboutPage = () => {
           />
         </div>
         <div className="right lg:mr-0 xl:mr-20 md:w-[50%] w-full h-auto space-y-3 flex-col flex justify-center md:order-2 order-1">
-          <Subheading text="About Us" />
+          <Subheading text="About Us" textColor="text-[#007BFF]"/>
           <Heading text="Who We Are" textColor="[#4B5563]" />
           <p className="font-normal txet-sm md:text-[16px] sm:tracking-wide text-[#4B5563]">
             At DigitalHorizon, we’re more than a digital agency—we’re your
