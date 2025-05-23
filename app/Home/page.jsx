@@ -6,8 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Typewriter } from "react-simple-typewriter";
 const Homepage = () => {
   return (
-    <div className="home mb-0 w-full h-auto lg:h-[80vh] flex justify-center items-start pt-6">
-      <div className="w-full p-2 md:p-0 md:w-[95%] lg:w-[85%]  h-auto flex md:flex-row flex-col justify-center items-center md:gap-3 gap-6">
+    <div className="home mb-0 w-full h-auto flex justify-center items-start pt-6">
+      <div className="w-full p-2 sm:w-[90%] lg:w-[85%]  h-auto flex md:flex-row flex-col justify-center items-center md:gap-3 gap-6">
         <div className="left md:w-[50%] w-full h-auto space-y-5">
           <h1 className="font-semibold 2xl:text-7xl 2xl:leading-20 xl:text-6xl lg:text-5xl md:text-5xl min-[768px]:text-4xl text-6xl xl:leading-16 lg:leading-14 max-sm:text-5xl max-xs:text-4xl">
             <span className="text-[#007BFF]">DigitalHorizon </span> - Elevate
@@ -30,7 +30,7 @@ const Homepage = () => {
               />
             </span>
           </h1>
-          <p className="font-normal md:text-sm text-[16px] tracking-wide text-[#4B5563] max-xs:text-xs maxx-sm:text-sm">
+          <p className="font-normal md:text-sm text-[16px] tracking-wide text-[#4B5563] max-xs:text-xs max-sm:text-sm">
             Welcome to DigitalHorizon, where innovation meets strategy to craft
             exceptional digital experiences. Empower your brand with
             cutting-edge solutions tailored to your success.
