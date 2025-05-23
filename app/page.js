@@ -1,6 +1,7 @@
 import AboutPage from "./About/Page";
 import Homepage from "./Home/page";
 import ServicePage from "./Services/Page";
+import StoriesPage from "./Stories/Page";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
     <Homepage/>
     <AboutPage/>
     <ServicePage/>
+    <StoriesPage/>
     </main>
   );
 }

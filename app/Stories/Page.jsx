@@ -18,42 +18,42 @@ import Subheading from "@/components/Subheading";
 import Heading from "@/components/Heading";
 import { Globe, Megaphone, PenTool, Store } from "lucide-react";
 import { IoMegaphoneOutline } from "react-icons/io5";
+import image from "../../public/story1.jpg"
+import image2 from "../../public/story2.jpg"
+import image3 from "../../public/story3.jpg"
 
-const ServicePage = () => {
-  let service_data = [
+const StoriesPage = () => {
+  let stories_data = [
     {
-      service_title: "Web Development & Design",
-      service_description:
-        "Creating visually stunning, high-performing websites that captivate and convert.",
+      story_title: "Project Alpha:",
+      story_description:
+        "Revamped a retail website, increasing online sales by 40%.",
+        story_image: image,
     },
     {
-      service_title: "Digital Marketing",
-      service_description:
-        "Amplify your reach with SEO, PPC, content marketing, and social media strategies content marketing, and social media strategies.",
+      story_title: "Brand Beta:",
+      story_description:
+        "Designed a brand identity that grew social engagement by 65%.",
+         story_image: image2,
     },
     {
-      service_title: "Branding & Identity",
-      service_description:
-        "Build a powerful brand with logo design, color schemes, and messaging.",
-    },
-    {
-      service_title: "E-commerce Solutions",
-      service_description:
-        "Seamless online store creation with top-notch UX and secure payment systems.",
+      story_title: "Tech Gamma:",
+      story_description:
+        "Developed a custom app that streamlined operations by 30%.",
+         story_image: image3,
     },
   ];
   return (
-    <div className="services mb-0 w-full h-auto flex justify-center overflow-x-hidden items-start pt-6 bg-[#007BFF] text-white">
-      <div className="w-full p-2 lg:w-[98%] h-auto flex flex-col justify-center items-center gap-6">
-        <div className="up lg:w-[50%] flex justify-center items-center flex-col w-full h-auto space-y-5">
-          <Subheading text="Services" textColor="[#FFFFFF]" />
-          <Heading text="What We Offer" textColor="[#FFFFFF]" />
-          <p className="font-normal txet-sm md:text-[16px] sm:tracking-wide  text-center">
-            Transform your business with our expert services designed to drive
-            growth and innovation.
+    <div className="services mb-0 w-full h-auto flex justify-center overflow-x-hidden items-center ">
+      <div className="w-full p-2 lg:w-[90%] h-auto flex flex-col justify-center items-center gap-6">
+        <div className="up flex justify-center items-start flex-col w-full h-auto space-y-3">
+          <Subheading text="Case Study" textColor="[#007BFF]" />
+          <Heading text="Proven Success Stories" textColor="[#4B5563]" />
+          <p className="font-normal txet-sm md:text-lg sm:tracking-wide  opacity-75">
+            Explore how we’ve helped businesses achieve remarkable milestones.
           </p>
         </div>
-        <div className="down w-full h-auto flex md:flex-wrap justify-center items-center py-6 gap-4">
+        <div className="down w-full h-auto flex md:flex-wrap justify-center md:justify-start items-center py-6 gap-4">
           <Carousel className="md:hidden max-md:block  w-full">
             <CarouselContent>
               <CarouselItem>
@@ -153,42 +153,30 @@ const ServicePage = () => {
             <CarouselNext />
           </Carousel>
 
-          {service_data &&
-            service_data.map(
-              ({ service_title, service_description, service_icon }, index) => (
+          {stories_data &&
+            stories_data.map(
+              ({ story_title, story_description , story_image}, index) => (
                 <Card
                   key={index}
-                  className="md:block hidden bg-[#F6F6F6] rounded-lg space-y-4 w-[260px] h-[328px] relative group overflow-hidden transition-colors duration-500"
+                  className="md:block hidden rounded-lg space-y-4 max-w-[430px] h-[280px] relative  bg-cover bg-center text-white"
+                //   className="md:block hidden rounded-lg space-y-4 w-[260px] h-[328px] relative group overflow-hidden transition-colors duration-500"
+                 style={{ backgroundImage: `url(${story_image.src})` }}
                 >
                   {/* Expanding BG Circle (behind everything) */}
-                  <div className="absolute -bottom-7 -right-7 h-28 w-28 bg-[#007BFF] rounded-full z-0 group-hover:scale-[10] transition-transform duration-700 ease-in-out" />
+                  <div className="absolute top-0 left-0 h-full w-full bg-black opacity-15 rounded-lg z-10 " />
 
                   {/* Content */}
-                  <div className="relative z-10">
-                    <CardHeader>
-                      <CardTitle className="text-[#4B5563] group-hover:text-white group-hover:opacity-70 opacity-25 text-4xl">
-                        0{index + 1}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-2">
-                      <h3 className="font-bold text-3xl text-[#007BFF] group-hover:text-white transition-colors">
-                        {service_title}
+                  <div className="relative h-[240px] flex items-end  z-20 ">
+                   
+                    <CardContent className="space-y-2 flex flex-col">
+                      <h3 className="font-bold text-3xl  group-hover:text-white transition-colors">
+                        {story_title}
                       </h3>
-                      <p className="text-sm sm:tracking-wide text-black group-hover:text-white transition-colors">
-                        {service_description}
+                      <p className="text-[16px] sm:tracking-wide group-hover:text-white transition-colors">
+                        {story_description}
                       </p>
                     </CardContent>
                   </div>
-
-                  {/* Icon on Top */}
-                  <CardFooter className="relative z-20">
-                    <div className="rounded-full absolute -bottom-28 -right-7 flex justify-center items-center h-28 w-28 bg-[#007BFF] group-hover:bg-white group-hover:text-[#007BFF] text-white transition-colors duration-300">
-                      {(index === 0 && <Globe size={50} />) ||
-                        (index === 1 && <Megaphone size={50} />) ||
-                        (index === 2 && <PenTool size={50} />) ||
-                        (index === 3 && <Store size={50} />)}
-                    </div>
-                  </CardFooter>
                 </Card>
               )
             )}
@@ -198,4 +186,4 @@ const ServicePage = () => {
   );
 };
 
-export default ServicePage;
+export default StoriesPage;
