@@ -18,9 +18,10 @@ import Subheading from "@/components/Subheading";
 import Heading from "@/components/Heading";
 import { Globe, Megaphone, PenTool, Store } from "lucide-react";
 import { IoMegaphoneOutline } from "react-icons/io5";
-import image from "../../public/story1.jpg"
-import image2 from "../../public/story2.jpg"
-import image3 from "../../public/story3.jpg"
+import image from "../../public/story1.jpg";
+import image2 from "../../public/story2.jpg";
+import image3 from "../../public/story3.jpg";
+import { Button } from "@/components/ui/button";
 
 const StoriesPage = () => {
   let stories_data = [
@@ -28,19 +29,19 @@ const StoriesPage = () => {
       story_title: "Project Alpha:",
       story_description:
         "Revamped a retail website, increasing online sales by 40%.",
-        story_image: image,
+      story_image: image,
     },
     {
       story_title: "Brand Beta:",
       story_description:
         "Designed a brand identity that grew social engagement by 65%.",
-         story_image: image2,
+      story_image: image2,
     },
     {
       story_title: "Tech Gamma:",
       story_description:
         "Developed a custom app that streamlined operations by 30%.",
-         story_image: image3,
+      story_image: image3,
     },
   ];
   return (
@@ -53,8 +54,8 @@ const StoriesPage = () => {
             Explore how we’ve helped businesses achieve remarkable milestones.
           </p>
         </div>
-        <div className="down w-full h-auto flex md:flex-wrap justify-center md:justify-start items-center py-6 gap-4">
-          <Carousel className="md:hidden max-md:block  w-full">
+        <div className="down w-full h-auto flex md:flex-wrap justify-center md:justify-start items-center py-3 gap-4">
+          {/* <Carousel className="md:hidden max-md:block  w-full">
             <CarouselContent>
               <CarouselItem>
                 <Card className=" bg-[#F6F6F6] rounded-lg space-y-4 w-[260px] h-[328px] relative">
@@ -151,23 +152,22 @@ const StoriesPage = () => {
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
-          </Carousel>
+          </Carousel> */}
 
           {stories_data &&
             stories_data.map(
-              ({ story_title, story_description , story_image}, index) => (
+              ({ story_title, story_description, story_image }, index) => (
                 <Card
                   key={index}
                   className="md:block hidden rounded-lg space-y-4 max-w-[430px] h-[280px] relative  bg-cover bg-center text-white"
-                //   className="md:block hidden rounded-lg space-y-4 w-[260px] h-[328px] relative group overflow-hidden transition-colors duration-500"
-                 style={{ backgroundImage: `url(${story_image.src})` }}
+                  //   className="md:block hidden rounded-lg space-y-4 w-[260px] h-[328px] relative group overflow-hidden transition-colors duration-500"
+                  style={{ backgroundImage: `url(${story_image.src})` }}
                 >
                   {/* Expanding BG Circle (behind everything) */}
                   <div className="absolute top-0 left-0 h-full w-full bg-black opacity-15 rounded-lg z-10 " />
 
                   {/* Content */}
                   <div className="relative h-[240px] flex items-end  z-20 ">
-                   
                     <CardContent className="space-y-2 flex flex-col">
                       <h3 className="font-bold text-3xl  group-hover:text-white transition-colors">
                         {story_title}
@@ -181,6 +181,9 @@ const StoriesPage = () => {
               )
             )}
         </div>
+        <Button className=" max-sm:px-4 max-sm:py-4 py-6 px-8 rounded-lg tracking-wide text-white bg-[#007BFF] font-semibold text-[16px] max-sm:text-sm hover:bg-[#1B1F3B] hover:scale-x-90">
+        View More Stories
+        </Button>
       </div>
     </div>
   );

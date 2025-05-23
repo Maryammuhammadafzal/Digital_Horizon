@@ -123,13 +123,13 @@
 
 @theme {
   --breakpoint-xs: 30rem;
-  --animate-bg: fullBg 1s ease-in-out forwards;
-  @keyframes fullBg {
+  --animate-marquee: marquee 3s ease-in-out infinite;
+  @keyframes marquee {
     0% {
-       background-color: #FFFFFF ;
+       transform: translateX(0);
     }
     100% {
-       background-color :#007BFF ;
+       transform: translateX(-100%);
     }
   }
 }

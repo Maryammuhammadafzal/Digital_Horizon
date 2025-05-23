@@ -1,6 +1,7 @@
 import AboutPage from "./About/Page";
 import Homepage from "./Home/page";
 import ServicePage from "./Services/Page";
+import SliderPage from "./Slider/Page";
 import StoriesPage from "./Stories/Page";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
     <AboutPage/>
     <ServicePage/>
     <StoriesPage/>
+    <SliderPage/>
     </main>
   );
 }
