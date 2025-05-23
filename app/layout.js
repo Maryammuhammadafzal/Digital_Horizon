@@ -1,11 +1,16 @@
-import { Fira_Sans } from "next/font/google";
+import { Fira_Sans, Gemunu_Libre } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const firaSans = Fira_Sans({
   variable: "--font-sans",
-  weight: ["400", "700"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+});
+const gemunuLibre = Gemunu_Libre({
+  variable: "--font-mono",
+  weight: ["400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
@@ -18,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${firaSans.variable}`}
+        className={`${firaSans.variable} ${gemunuLibre.variable}`}
       >
         <Header/>
         {children}
