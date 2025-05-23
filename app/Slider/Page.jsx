@@ -1,16 +1,28 @@
+import { Sparkle } from 'lucide-react'
 import React from 'react'
 
 const SliderPage = () => {
   return (
-    <div className='w-full  h-auto my-10'>
-      <div className="marequee overflow-hidden bg-[#4B5563] text-white ">
-        <div className="marquee-inner flex">
-                <p className='marquee_line shrink-0 m-0 py-[10px] px-[15px] whitespace-nowrap animate-marquee duration-2000 ease-in-out infinite'>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae aliquid totam quidem cupiditate molestiae eaque amet consectetur quasi? Autem voluptate pariatur maxime et quo facere tenetur, aut cum incidunt quisquam.
-                </p>
-        </div>
-      </div>
+   <div className="w-full h-auto my-20 relative">
+  <div className="overflow-hidden rotate-6 bg-[#525963] text-white">
+    <div className="flex items-center whitespace-nowrap animate-marquee gap-12 py-6">
+      {[...Array(8)].map((_, i) => (
+        <h3 key={i} className="flex gap-12 font-bold text-5xl items-center">
+          Digital Agency <Sparkle size={38} />
+        </h3>
+      ))}
     </div>
+  </div>
+  <div className="overflow-hidden -z-10 -rotate-3 absolute top-0 left-0 right-0 bg-[#007BFF] text-white">
+    <div className="flex items-center whitespace-nowrap animate-marquee-left gap-12 py-6">
+      {[...Array(8)].map((_, i) => (
+        <h3 key={i} className="flex gap-12 font-bold text-5xl items-center">
+          We Are Creative <Sparkle size={38} />
+        </h3>
+      ))}
+    </div>
+  </div>
+</div>
   )
 }
 
