@@ -123,13 +123,13 @@
 
 @theme {
   --breakpoint-xs: 30rem;
-  --animate-bg: fullBg 1s ease-in-out infinite;
+  --animate-bg: fullBg 1s ease-in-out forwards;
   @keyframes fullBg {
     0% {
-      transform: background-color:  ;
+       background-color: #FFFFFF ;
     }
-    50% {
-      transform: rotate(3deg);
+    100% {
+       background-color :#007BFF ;
     }
   }
 }
