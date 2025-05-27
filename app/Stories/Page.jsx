@@ -54,7 +54,7 @@ const StoriesPage = () => {
             Explore how we’ve helped businesses achieve remarkable milestones.
           </p>
         </div>
-        <div className="down w-full h-auto flex md:flex-wrap justify-center md:justify-start items-center py-3 gap-4">
+        <div className="down w-full h-auto flex max-md:flex-wrap md:justify-start items-center py-3 gap-4">
           {/* <Carousel className="md:hidden max-md:block  w-full">
             <CarouselContent>
               <CarouselItem>
@@ -159,7 +159,7 @@ const StoriesPage = () => {
               ({ story_title, story_description, story_image }, index) => (
                 <Card
                   key={index}
-                  className="md:block hidden rounded-lg space-y-4 max-w-[430px] h-[280px] relative  bg-cover bg-center text-white"
+                  className=" rounded-lg space-y-4 w-full md:max-w-[430px] h-[280px] relative  bg-cover bg-center text-white"
                   //   className="md:block hidden rounded-lg space-y-4 w-[260px] h-[328px] relative group overflow-hidden transition-colors duration-500"
                   style={{ backgroundImage: `url(${story_image.src})` }}
                 >

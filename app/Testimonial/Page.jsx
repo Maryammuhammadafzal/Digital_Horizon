@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 const TestimonialPage = () => {
   return (
-    <div className="about w-full h-auto flex justify-center items-start">
+    <div className="about w-full h-auto flex justify-center items-start sm:px-0 px-2">
       <div className="w-full px-3 sm:w-[85%]  h-auto flex md:flex-row flex-col justify-center items-center md:gap-3 gap-6">
         <div className="left md:w-[50%] w-full h-auto flex justify-center items-center md:order-1 order-2">
           <Image
