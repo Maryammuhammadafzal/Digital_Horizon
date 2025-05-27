@@ -149,6 +149,9 @@ main {
 h1,
 h3,
 h5,
-.copyright {
+.copyright,
+.send-btn,
+.send-mail,
+.company-name {
   font-family: "Gemunu Libre", sans-serif;
 }
