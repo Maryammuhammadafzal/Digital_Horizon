@@ -161,7 +161,7 @@ const ServicePage = () => {
                   className="md:block hidden bg-[#F6F6F6] rounded-lg space-y-4 w-[260px] h-[328px] relative group overflow-hidden transition-colors duration-500"
                 >
                   {/* Expanding BG Circle (behind everything) */}
-                  <div className="absolute -bottom-7 -right-7 h-28 w-28 bg-[#007BFF] rounded-full z-0 group-hover:scale-[10] transition-transform duration-700 ease-in-out" />
+                  <div className="absolute -bottom-11 -right-6 h-28 w-28 bg-[#007BFF] rounded-full z-0 group-hover:scale-[10] transition-transform duration-700 ease-in-out" />
 
                   {/* Content */}
                   <div className="relative z-10">
@@ -182,7 +182,7 @@ const ServicePage = () => {
 
                   {/* Icon on Top */}
                   <CardFooter className="relative z-20">
-                    <div className="rounded-full absolute -bottom-28 -right-7 flex justify-center items-center h-28 w-28 bg-[#007BFF] group-hover:bg-white group-hover:text-[#007BFF] text-white transition-colors duration-300">
+                    <div className="rounded-full absolute -bottom-30 -right-5 flex justify-center items-center h-28 w-28 bg-[#007BFF] group-hover:bg-white group-hover:text-[#007BFF] text-white transition-colors duration-300">
                       {(index === 0 && <Globe size={50} />) ||
                         (index === 1 && <Megaphone size={50} />) ||
                         (index === 2 && <PenTool size={50} />) ||
